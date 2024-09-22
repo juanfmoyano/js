@@ -1,8 +1,3 @@
-// Binding: generic word to represent all types of storing a value
-// 1. Let: block scope -> "tentacles" or "links" (enlaces in spanish), they grab the value, they are not "boxes" that contain the value
-// 2. Var: function scope -> "variables", how the "tentacles" or "links" were declared before 2015
-// 3. Constant: constants, they point to the same value while it exists
-// Environment: the collection of bindings and their values that exist at a given time
 
 let caught = 5 * 5;
 let ten = 10;
@@ -36,62 +31,6 @@ var name = "Ayda";
 const greeting = "Hello";
 console.log({ result3: greeting + name });
 // { result3: 'HelloAyda' }
-
-// [Binding names]
-const $myName = "$myName";
-const _myName = "_myName";
-const fuzzylittleturtle = 'fuzzylittleturtle';
-const fuzzy_little_turtle = 'fuzzy_little_turtle';
-const FuzzyLittleTurtle = 'FuzzyLittleTurtle';
-const fuzzyLittleTurtle = 'fuzzyLittleTurtle';
-const FUZZY_LITTLE_TURTLE = 'FUZZY_LITTLE_TURTLE';
-// const if = 'test'; --> Not allowed, SyntaxError
-/* Keywords
-1. break
-2. case
-3. catch
-4. class
-5. const
-6. continue
-7. debugger
-8. default
-9. delete
-10. do
-11. else
-12. enum
-13. export
-14. extends
-15. false
-16. finally
-17. for
-18. function
-19. if
-20. implements
-21. import
-22. in
-23. instanceof
-24. interface
-25. let
-26. new
-27. package
-28. private
-29. protected
-30. public
-31. return
-32. static
-33. super
-34. switch
-35. this
-36. throw
-37. true
-38. try
-39. typeof
-40. var
-41. void
-42. while
-43. with
-44. yield
- */
 
 // [IF condition]
 console.log("[IF 1]");
