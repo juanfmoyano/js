@@ -90,12 +90,12 @@ const createUser = (name, age) => {
 	There are no limitations on property names. 
 */
 
-const obj = {
+const objWithObjectKeys = {
   for: 1,
   let: 2,
   return: 3,
 };
-console.log({ value: obj.for + obj.let + obj.return });
+console.log({ value: objWithObjectKeys.for + objWithObjectKeys.let + objWithObjectKeys.return });
 // -> { value: 6 }
 
 const obj2 = {
