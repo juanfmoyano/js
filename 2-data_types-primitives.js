@@ -32,6 +32,37 @@
 	7- Set: represents a collection of unique values.
 	8- WeakMap: represents a collection of key/value pairs in which the keys are weakly referenced.
 	9- WeakSet: represents a collection of unique values in which the values are weakly referenced.
+
+	typeof operator: returns the type of a variable or expression.
+		Possible return values
+			- "string"
+			- "number"
+			- "bigint"
+			- "boolean"
+			- "undefined"
+			- "object"
+			- "symbol"
+			- "function"
+		Examples
+			typeof "John"; // -> "string"
+			typeof 3.14; // -> "number"
+			typeof true; // -> "boolean"
+			typeof undefined; // -> "undefined"
+			typeof null; // -> "object"
+			typeof Symbol("symbol"); // -> "symbol"
+			typeof function() {}; // -> "function"
+			typeof Nan; // -> "number"
+			typeof Infinity; // -> "number"
+			typeof []; // -> "object"
+			typeof {}; // -> "object"
+			typeof new Date(); // -> "object"
+			typeof /test/i; // -> "object"
+			typeof new Map(); // -> "object"
+			typeof new Set(); // -> "object"
+			typeof new WeakMap(); // -> "object"
+			typeof new WeakSet(); // -> "object"
+			
+
 */
 
 /* Autoboxing example for string length */

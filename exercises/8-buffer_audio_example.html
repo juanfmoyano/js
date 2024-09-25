@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Audio Test</title>
+</head>
+<script>
+	let audioContext;
+
+	function startAudio() {
+		// Create AudioContext on user interaction to comply with autoplay policies
+		if (!audioContext) {
+			audioContext = new (window.AudioContext || window.webkitAudioContext)();
+		}
+
+		const sampleRate = audioContext.sampleRate;
+		const duration = 2; // 20 seconds
+		const numSamples = sampleRate * duration;
+
+		const audioBuffer = audioContext.createBuffer(1, numSamples, sampleRate);
+		const channelData = audioBuffer.getChannelData(0);
+
+		// Generate a simple sine wave
+		for (let i = 0; i < numSamples; i++) {
+			channelData[i] = Math.sin(440 * Math.PI * 2 * i / sampleRate);
+		}
+
+		// Play the generated audio
+		const source = audioContext.createBufferSource();
+		source.buffer = audioBuffer;
+		source.connect(audioContext.destination);
+		source.start();
+	}
+</script>
+
+<body>
+	<h1>Audio Test</h1>
+	<button onclick="startAudio()">Start Audio</button>
+</body>
+
+</html>
