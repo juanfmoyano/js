@@ -95,7 +95,10 @@ const objWithObjectKeys = {
   let: 2,
   return: 3,
 };
-console.log({ value: objWithObjectKeys.for + objWithObjectKeys.let + objWithObjectKeys.return });
+console.log({
+  value:
+    objWithObjectKeys.for + objWithObjectKeys.let + objWithObjectKeys.return,
+});
 // -> { value: 6 }
 
 const obj2 = {
@@ -214,3 +217,4 @@ for (let code in obj9) {
 // -> { code: '2', country: 'Switzerland' }
 // -> { code: '3', country: 'Great Britain' }
 // -> { code: '4', country: 'USA' }
+
