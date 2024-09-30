@@ -113,7 +113,7 @@ switch (weather) {
 	* try: This is the block of code that will be tested for errors while it is being executed.
 	* catch: This is the block of code that will execute if there is an error in the try block.
 	* finally: This block of code will always execute after the try and catch blocks have executed.
-	* throw: This is how you create a custom error. You can use this when you want to stop the execution of the program when a certain condition is met.
+	* throw: This is how you create a custom error. You can use this when you want to stop the execution of the program when a certain condition is met. Can throw text, numbers, booleans, objects, etc.
 	* Error: This is an object that represents an error that occurs during the execution of the program.
 */
 
@@ -125,6 +125,7 @@ const customFn = (userAge) => {
 		if (userAge < 18) {
 			throw new Error("User is not old enough");
 		}
+		console.log('User is old enough');
 	} catch (error) {
 		console.log(error);
 	} finally {
@@ -132,7 +133,18 @@ const customFn = (userAge) => {
 	}
 }
 
-customFn(25); // User age processed
+customFn(25); // User is old enough - User age processed
 customFn('asd'); // Error: User age is not a number - User age processed
 customFn(15); // Error: User is not old enough - User age processed
+
+// Error constructors 
+// Error - Creates an error object.
+// AggregateError - A collection of errors thrown simultaneously.
+// EvalError - An error occurred during the evaluation of a JavaScript expression.
+// InternalError - An internal JavaScript error, often indicating a bug in the engine.
+// RangeError - A value is outside the allowed range for a given operation.
+// ReferenceError - A variable or object is referenced before it’s declared or doesn’t exist.
+// SyntaxError - The code contains incorrect syntax, preventing it from being parsed.
+// TypeError - A value is not of the expected type.
+
 
