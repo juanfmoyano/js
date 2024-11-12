@@ -130,6 +130,23 @@ console.log("Bye!");
 // -> Bye!
 // -> Hello!
 
+const myFn = () => {
+  console.log('Before promise');
+  const test = new Promise((resolve, reject) => {
+    console.log('Executing promise');
+    resolve('value')
+  }).then(value => {
+    console.log('Resolved value', value)
+  });
+  console.log('After promise');
+}
+
+myFn();
+// -> Before promise
+// -> Executing promise
+// -> After promise
+// -> Resolved value value
+
 /*
 	[Promises chaining]
 	Chaining refers to the notion of subsequently calling then() on the promise returned by the preceding then() method.
